@@ -142,4 +142,3 @@ const ruinedBibs = runners.filter(function(items){
 })
 
 console.log(ruinedBibs);
-
