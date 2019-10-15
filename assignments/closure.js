@@ -15,11 +15,17 @@ function state(stateName){
     const animal = "bats";
     const pasttime = "live music";
 
+
     console.log(`${cityName} is the capital of ${stateName} and is known for ${food}, ${dance}, and all the ${animal} living under the city's bridges. Austinites love ${pasttime} and hold the city's motto ${cityMotto} near and dear.`);
+  
   }//This closes city
 
-  console.log(`${stateName} is known for its world-famous ${food} and ${dance} and all ${stateName} citizens wear ${hat}. `);
+  city("Austin");
+
+  console.log(`${stateName} is known for its world-famous ${food} and ${dance} and all ${stateName} citizens wear ${hat}.`);
 }//This closes state
+
+state("Texas");
 
 
 
