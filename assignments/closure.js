@@ -4,6 +4,30 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+//Global level
+function state(stateName){
+  const food = "chili and tacos";
+  const dance = "two-step";
+  const hat = "cowboy hats";
+  
+  function city(cityName){
+    const cityMotto = "Keep Austin Weird";
+    const animal = "bats";
+    const pasttime = "live music";
+
+
+    console.log(`${cityName} is the capital of ${stateName} and is known for ${food}, ${dance}, and all the ${animal} living under the city's bridges. Austinites love ${pasttime} and hold the city's motto ${cityMotto} near and dear.`);
+  
+  }//This closes city
+
+  city("Austin");
+
+  console.log(`${stateName} is known for its world-famous ${food} and ${dance} and all ${stateName} citizens wear ${hat}.`);
+}//This closes state
+
+state("Texas");
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

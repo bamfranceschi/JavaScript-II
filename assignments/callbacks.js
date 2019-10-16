@@ -1,4 +1,6 @@
-// Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
+// Create a higher order function and invoke the callback function to test your work. 
+// You have been provided an example of a problem and a solution to see how this works with our items array.  
+// Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
@@ -38,27 +40,85 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   console.log(test2); // "this Pencil is worth a million dollars!"
 */
 
+//challenge 1
 
 function getLength(arr, cb) {
+  return cb(arr.length);
   // getLength passes the length of the array into the callback.
 }
 
+// const versionA = (length) => `There are ${length} items in my backpack`;
+
+// function versionB(length) {
+//   return `There are ${length} items in my backpack`;
+// }
+
+// const versionC = (length) => {
+//   return `There are ${length} items in my backpack`;
+// }
+
+// const getLengthTest = getLength(items, versionC);
+
+const getLengthTest = getLength(items, (length) => `There are ${length} items in my backpack.`);
+console.log(getLengthTest);
+
+//challenge 2
+
 function last(arr, cb) {
+  return cb(arr[arr.length-1]);
   // last passes the last item of the array into the callback.
 }
 
+const lastTest = last(items, (ele) => `${ele} is the last item in the array`);
+console.log(lastTest);
+
+//challenge 3
+
+// const numbers = [4, 3, 7, 8, 14];
+
 function sumNums(x, y, cb) {
+  return cb(x, y, x + y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
+const sumTest = sumNums(1, 2, (a, b, sum) => `The sum of the numbers ${a} and ${b} is ${sum}`);
+console.log(sumTest);
+
+// sumNums(1, 2, console.log);
+
+// function sumNumsCB(num1, num2){
+//   return (num1 + num2);
+// }
+
+// const sumNumsTest = sumNums(numbers, sumNumsCB);
+
+// console.log(sumNumsTest);
+
+//challenge 4
+
 function multiplyNums(x, y, cb) {
+  return cb(x, y, x * y);
+ 
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
-function contains(item, list, cb) {
+const multiplyTest = multiplyNums(3, 3, (a, b, product) => `The product of ${a} and ${b} is ${product}`);
+console.log(multiplyTest);
+
+// function contains(item, list, cb) {
+//   if (list.includes(item)) {
+//     return cb(`${true}`);
+//   } else { 
+//     return cb(`${false}`);
+//   }
+// }
+
+// const containsTest = contains(items, e => items[e]);
+// console.log(containsTest([pencil]));
+
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+
 
 /* STRETCH PROBLEM */
 
